@@ -80,8 +80,6 @@ def main(max_tenders, output):
     page = 1
 
     while True:
-        if page == 3: break
-
         tenders = getTenders(page, max_tenders)
         if not tenders:
             break
@@ -113,3 +111,4 @@ if __name__ == "__main__":
     
     main(args.max, args.output)
     uvicorn.run(app, host="127.0.0.1", port=8000)
+
